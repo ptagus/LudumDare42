@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float sensitivity = 5f;
     public float maxYAngle = 10f;
     public float maxXAngle = 60f;
+    public GameObject GravitySphere;
     private Vector2 currentRotation;
     bool weapon;
     Ray r;
@@ -24,6 +25,10 @@ public class PlayerController : MonoBehaviour {
         {
             weapon = true;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            weapon = false;
+        }
         currentRotation.x += Input.GetAxis("Mouse X") * sensitivity;
         currentRotation.y -= Input.GetAxis("Mouse Y") * sensitivity;
         currentRotation.x = Mathf.Clamp(currentRotation.x, -maxXAngle, maxXAngle);
@@ -31,15 +36,22 @@ public class PlayerController : MonoBehaviour {
         transform.rotation = Quaternion.Euler(currentRotation.y, currentRotation.x, 0);
         if (Input.GetMouseButtonDown(0))
         {
-            r = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(r, out rayhit, 100))
+            if (weapon)
             {
-                if (rayhit.collider != null)
+                r = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(r, out rayhit, 100))
                 {
-                    Debug.Log(rayhit.collider.name);
-                    Debug.Log(weapon);
-                    Shoot(rayhit.collider.gameObject);
+                    if (rayhit.collider != null)
+                    {
+                        Debug.Log(rayhit.collider.name);
+                        Debug.Log(weapon);
+                        Shoot(rayhit.collider.gameObject);
+                    }
                 }
+            }
+            else
+            {
+                Instantiate(GravitySphere, transform.position, Quaternion.identity, this.transform);
             }
         }
         if (Input.GetKey(KeyCode.W))
@@ -47,9 +59,19 @@ public class PlayerController : MonoBehaviour {
             transform.Translate(Vector3.forward * 0.1f);
 
         }
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.zero);
+            transform.Translate(Vector3.left * 0.1f);
+
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * 0.1f);
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+
         }
     }    
 
