@@ -589,7 +589,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4571519198240154, guid: 906888f2fdb08f04e852fc92e04c3454, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.35
+      value: -3.26
       objectReference: {fileID: 0}
     - target: {fileID: 4571519198240154, guid: 906888f2fdb08f04e852fc92e04c3454, type: 2}
       propertyPath: m_LocalPosition.y
@@ -597,7 +597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4571519198240154, guid: 906888f2fdb08f04e852fc92e04c3454, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.25177956
+      value: -3.48
       objectReference: {fileID: 0}
     - target: {fileID: 4571519198240154, guid: 906888f2fdb08f04e852fc92e04c3454, type: 2}
       propertyPath: m_LocalRotation.x
@@ -815,10 +815,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1248682784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1248682786
 MeshRenderer:
