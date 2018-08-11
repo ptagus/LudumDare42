@@ -25,5 +25,6 @@ public class AsteroidsBehavior : MonoBehaviour {
     {
         ShipPosition = t;
         toShip = true;
+        Destroy(this.gameObject, 0.5f);
     }
 }
