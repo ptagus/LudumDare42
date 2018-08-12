@@ -3910,7 +3910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: button
+  m_Text: again
 --- !u!222 &1033171634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4168,7 +4168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1167583329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5913,7 +5913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: button
+  m_Text: exit
 --- !u!222 &2000322276
 CanvasRenderer:
   m_ObjectHideFlags: 0
