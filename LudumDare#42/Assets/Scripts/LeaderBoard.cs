@@ -33,6 +33,13 @@ public class LeaderBoard : MonoBehaviour
             leaderboard[i].text = Scores.name[i] + "               " + Scores.scores[i];
         }
     }
+    public void AddnewScore()
+    {
+        string test = GameObject.Find("EnterName").GetComponentInChildren<Text>().text;
+        int p = (int)GameObject.Find("GB").GetComponent<Gamebehavior>().points;
+        Scores.NewScore(test, p);
+    }
+
 }
 
 public static class Scores

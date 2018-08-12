@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour {
 
     public GameObject shield;
+    public Gamebehavior gb;
     public Image gravityWeapon;
     public Image telekinesWeapon;
     public Image deathscreen, winscreen;
@@ -83,6 +84,7 @@ public class GameUI : MonoBehaviour {
     public void Win()
     {
         winscreen.gameObject.SetActive(true);
+        Scores.NewScore("You", (int)gb.points);
     }
 
 }

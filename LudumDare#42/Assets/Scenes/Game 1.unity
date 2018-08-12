@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 349372456}
   - component: {fileID: 349372455}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1917,6 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 209131041}
+  gb: {fileID: 0}
   gravityWeapon: {fileID: 453199401}
   telekinesWeapon: {fileID: 2072457781}
   deathscreen: {fileID: 306422608}
@@ -1925,82 +1926,6 @@ MonoBehaviour:
   shieldButton1: {fileID: 2072032545}
   pause: {fileID: 837116903}
   pointscount: {fileID: 0}
---- !u!1 &717555586
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 717555587}
-  - component: {fileID: 717555589}
-  - component: {fileID: 717555588}
-  m_Layer: 5
-  m_Name: Text (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &717555587
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717555586}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7387999, y: 1.9368, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1167583329}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4, y: 0.1}
-  m_AnchorMax: {x: 0.6, y: 0.2}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &717555588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717555586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.62144, g: 0.9372966, b: 0.990566, a: 0.5372549}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e0e464b66cdabcc498bd8381b3382bc9, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u044F\u0435\u043C \u0442\u044B
-    \u0437\u0430\u043D\u044F\u043B "
---- !u!222 &717555589
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717555586}
-  m_CullTransparentMesh: 0
 --- !u!1 &734207541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2510,7 @@ GameObject:
   - component: {fileID: 943722553}
   - component: {fileID: 943722552}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: EnterName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2897,7 +2822,7 @@ GameObject:
   - component: {fileID: 1021408832}
   - component: {fileID: 1021408831}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2960,7 +2885,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1021408832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167583328}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1021408832
@@ -3133,7 +3069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: button
+  m_Text: "\u0412 \u043C\u0435\u043D\u044E"
 --- !u!222 &1033171634
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3287,6 +3223,7 @@ GameObject:
   - component: {fileID: 1167583329}
   - component: {fileID: 1167583331}
   - component: {fileID: 1167583330}
+  - component: {fileID: 1167583332}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -3309,7 +3246,6 @@ RectTransform:
   - {fileID: 1715644639}
   - {fileID: 1021408830}
   - {fileID: 349372454}
-  - {fileID: 717555587}
   m_Father: {fileID: 554686738}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3352,6 +3288,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167583328}
   m_CullTransparentMesh: 0
+--- !u!114 &1167583332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167583328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60b429accc8dae4b887fe44999bc184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gui: {fileID: 554686739}
 --- !u!1001 &1169292233
 Prefab:
   m_ObjectHideFlags: 0
@@ -4925,7 +4873,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: button
+  m_Text: "\u0421\u043D\u0430\u0447\u0430\u043B\u0430"
 --- !u!222 &2000322276
 CanvasRenderer:
   m_ObjectHideFlags: 0
