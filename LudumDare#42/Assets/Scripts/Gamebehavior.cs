@@ -22,22 +22,22 @@ public class Gamebehavior : MonoBehaviour
 
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         points += Time.deltaTime;
-        pointstext.text = "Points: " + points.ToString("#");
+        pointstext.text = "points: " + points.ToString("#");
         energySlider.value += Time.deltaTime * energydownspeed;
         if (energySlider.value >= 1)
         {
             GameObject.Find("GameUI").GetComponent<GameUI>().Death();
         }
-	}
+    }
 
     public void ShieldStatusUpdate(bool status)
     {

@@ -7,30 +7,30 @@ public class LeaderBoard : MonoBehaviour
 {
     public List<Text> leaderboard;
     int n = 10;
-	void Start ()
+    void Start()
     {
 
-	}
+    }
 
-	void Update ()
+    void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             n++;
-            Scores.NewScore("First", n);
+            Scores.NewScore("first", n);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
             FillTheLeaderboard();
         }
-	}
+    }
 
     public void FillTheLeaderboard()
     {
-        for(int i=0; i < leaderboard.Count; i++)
+        for (int i = 0; i < leaderboard.Count; i++)
         {
-            leaderboard[i].text = Scores.name[i] + "               "+ Scores.scores[i];
+            leaderboard[i].text = Scores.name[i] + "               " + Scores.scores[i];
         }
     }
 }
@@ -43,11 +43,11 @@ public static class Scores
 
     public static void NewScore(string n, int s)
     {
-        for(int i=0; i<10;i++)
+        for (int i = 0; i < 10; i++)
         {
             if (s > scores[i])
             {
-                for(int j = 8; j >= i; j--)
+                for (int j = 8; j >= i; j--)
                 {
                     name[j + 1] = name[j];
                     scores[j + 1] = scores[j];
