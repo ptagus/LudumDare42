@@ -9,7 +9,7 @@ public class GravityBoom : MonoBehaviour {
 	void Start ()
     {
         transform.parent = null;
-        Invoke("GraviteExplosion", 1);
+        Invoke("GraviteExplosion", 2);
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,6 @@ public class GravityBoom : MonoBehaviour {
         {
             rb.AddExplosionForce(100, this.transform.position, 10, 10, ForceMode.Impulse);
         }
-        Destroy(this.gameObject, 1f);
     }
 
     private void OnTriggerEnter(Collider other)
