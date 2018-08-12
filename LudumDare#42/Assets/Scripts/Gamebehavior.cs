@@ -31,7 +31,7 @@ public class Gamebehavior : MonoBehaviour
 	void Update ()
     {
         points += Time.deltaTime;
-        pointstext.text = "points: " + points.ToString("#");
+        pointstext.text = "Points: " + points.ToString("#");
         energySlider.value += Time.deltaTime * energydownspeed;
         if (energySlider.value >= 1)
         {

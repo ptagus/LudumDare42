@@ -17,7 +17,7 @@ public class LeaderBoard : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Z))
         {
             n++;
-            Scores.NewScore("first", n);
+            Scores.NewScore("First", n);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
