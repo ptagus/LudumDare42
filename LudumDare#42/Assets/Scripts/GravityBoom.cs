@@ -20,6 +20,7 @@ public class GravityBoom : MonoBehaviour {
 
     void GraviteExplosion()
     {
+        GameObject.Find("GB").GetComponent<Gamebehavior>().points += 3 * asteroids.Count;
         foreach(Rigidbody rb in asteroids)
         {
             rb.AddExplosionForce(100, this.transform.position, 10, 10, ForceMode.Impulse);
